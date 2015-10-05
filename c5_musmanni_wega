@@ -1,0 +1,26 @@
+int x = 100; //initial statement of x
+int y = 100; // initial statement of y
+float endW; // the float is endW
+
+void setup() { 
+  size(200, 200); 
+  frameRate(5); //5 frames per second
+  endW = 0; // update of endW
+}
+
+void draw() {
+  background(255); // background is white
+  stroke(0); // stroke is black
+  noFill(); //no fill :)
+
+  for (float w = 0.0; w<=endW; w+=3.0) { //initial statements, w is 0
+    //test,(w) is less than or equal to endW =0
+    //update, w plus 3.0 is ment to be less or equal to endW 
+
+    ellipse(x, y, w, w);// ellipse grows each time because of the w's
+  }
+
+  if (endW<=200) { //circles stop at 200
+    endW=endW+3.0; //update, endW is now 3
+  }
+}
